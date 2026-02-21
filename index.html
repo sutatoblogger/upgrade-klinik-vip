@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Upgrade VIP & Aktivasi Reservasi | CiledugPromo</title>
+    <meta name="description" content="Dokumen rahasia aktivasi VIP dan pengamanan slot klinik estetika di CiledugPromo.">
+    <meta name="theme-color" content="#fcfcfc">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-main: #fcfcfc;
+            --card-bg: #ffffff;
+            --primary: #d6336c; /* Magenta/Pink Premium */
+            --primary-light: #fff0f6;
+            --gold-rose: #b76e79;
+            --gold: #d4af37;
+            --red-alert: #e53e3e;
+            --text-dark: #1a202c;
+            --text-muted: #718096;
+            --border-glow: rgba(214, 51, 108, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg-main); color: var(--text-dark); line-height: 1.6; background-image: radial-gradient(circle at top right, #fff0f6 0%, transparent 40%), radial-gradient(circle at bottom left, #fce4ec 0%, transparent 40%); background-attachment: fixed; }
+        
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px 60px; }
+        
+        /* Alert Banner */
+        .alert-banner { background: #fff5f5; border-bottom: 2px solid var(--red-alert); padding: 15px; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 15px rgba(229, 62, 62, 0.1); }
+        .alert-banner h1 { color: var(--red-alert); font-size: 13px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; animation: pulse 2s infinite; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.7; } 100% { opacity: 1; } }
+
+        /* Header Logo */
+        .header-brand { text-align: center; margin-top: 30px; margin-bottom: 20px; }
+        .logo-img { width: 90px; height: 90px; object-fit: cover; border-radius: 50%; border: 3px solid var(--primary); box-shadow: 0 10px 25px rgba(214, 51, 108, 0.2); }
+
+        /* Typography */
+        .page-title { text-align: center; margin-bottom: 40px; }
+        .page-title h2 { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; line-height: 1.3; color: #1a202c; }
+        .page-title h2 span { color: var(--primary); }
+        .page-title p { color: var(--text-muted); margin-top: 10px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; }
+
+        /* Cards */
+        .card { background: var(--card-bg); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; padding: 35px; margin-bottom: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.04); position: relative; overflow: hidden; }
+        .card-red { border-left: 4px solid var(--red-alert); }
+        .card-pink { border-left: 4px solid var(--primary); }
+        .card h3 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .card-red h3 { color: var(--red-alert); }
+        .card-pink h3 { color: var(--primary); }
+        .card p { color: var(--text-dark); margin-bottom: 15px; font-size: 15px; }
+        
+        /* Prosedur Order (Timeline) */
+        .timeline { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
+        .timeline-item { display: flex; align-items: flex-start; gap: 15px; background: var(--bg-main); padding: 15px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.03); }
+        .timeline-number { background: var(--primary-light); color: var(--primary); border: 1px solid var(--primary); width: 28px; height: 28px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+        .timeline-content h4 { font-size: 15px; color: var(--text-dark); margin-bottom: 3px; }
+        .timeline-content p { font-size: 13px; color: var(--text-muted); margin: 0; }
+
+        /* Pricing Table */
+        .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+        .pricing-card { background: var(--card-bg); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; padding: 30px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+        .pricing-card.vvip { border: 2px solid var(--gold); background: linear-gradient(145deg, #1a202c, #2d3748); color: #fff; transform: scale(1.02); z-index: 10; box-shadow: 0 20px 40px rgba(212,175,55,0.15); }
+        .badge-best { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--gold), #997a15); color: #fff; font-size: 11px; font-weight: 900; padding: 5px 18px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3); }
+        
+        .pricing-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; margin-bottom: 10px; color: var(--primary); }
+        .vvip .pricing-title { color: var(--gold); }
+        
+        .price { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 900; color: var(--text-dark); margin-bottom: 5px; }
+        .vvip .price { color: #fff; }
+        .price span { font-family: 'Inter', sans-serif; font-size: 14px; color: var(--text-muted); font-weight: normal; }
+        .vvip .price span { color: #cbd5e0; }
+        
+        .feature-list { list-style: none; margin: 20px 0; text-align: left; flex-grow: 1; }
+        .feature-list li { font-size: 13.5px; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 8px; border-bottom: 1px dashed rgba(0,0,0,0.05); padding-bottom: 8px; color: var(--text-dark); }
+        .vvip .feature-list li { color: #e2e8f0; border-bottom-color: rgba(255,255,255,0.1); }
+        .feature-list li::before { content: '✓'; color: var(--primary); font-weight: bold; }
+        .vvip .feature-list li::before { color: var(--gold); }
+
+        /* Info Box Addons */
+        .bonus-box { background: var(--primary-light); border: 1px dashed var(--primary); padding: 15px; border-radius: 8px; margin-top: 15px; text-align: left; }
+        .speed-box { background: rgba(212, 175, 55, 0.05); border: 1px solid var(--gold); padding: 15px; border-radius: 8px; margin-top: 15px; text-align: left; }
+
+        /* Payment Section */
+        .payment-card { background: #fffafc; border: 2px dashed var(--primary); border-radius: 16px; padding: 35px; margin-top: 40px; text-align: center; }
+        .bank-info { background: #fff; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 10px 20px rgba(0,0,0,0.03); color: #000; padding: 25px; border-radius: 12px; display: inline-block; margin: 20px 0; text-align: left; min-width: 280px; }
+        .bank-logo { font-size: 24px; font-weight: 900; color: #005A9C; margin-bottom: 10px; letter-spacing: 1px; display: flex; align-items: center; gap: 10px; } 
+        .rekening { font-size: 28px; font-weight: 900; font-family: monospace; letter-spacing: 2px; color: #1a202c; }
+
+        /* Buttons */
+        .btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 15px; border-radius: 8px; text-align: center; font-weight: 800; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; font-size: 12px; margin-top: 10px; }
+        .btn-outline { background: transparent; border: 1px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: #fff; }
+        .btn-gold { background: linear-gradient(135deg, var(--gold), #997a15); color: #fff; border: none; box-shadow: 0 5px 15px rgba(212,175,55,0.3); }
+        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(212,175,55,0.5); }
+        
+        .btn-wa { background: linear-gradient(135deg, var(--primary), #a71d4c); color: #fff; font-size: 15px; padding: 18px; border-radius: 50px; box-shadow: 0 10px 25px rgba(214, 51, 108, 0.3); margin-top: 20px; }
+        .btn-wa:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(214, 51, 108, 0.4); }
+
+        .footer { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05); color: var(--text-muted); font-size: 12px; }
+
+        @media (max-width: 768px) {
+            .pricing-grid { grid-template-columns: 1fr; }
+            .pricing-card.vvip { transform: scale(1); margin-top: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="alert-banner">
+        <h1>⚠️ PERINGATAN: AKSES RESERVASI KLINIK ANDA SAAT INI TERKUNCI</h1>
+    </div>
+
+    <div class="container">
+        
+        <header class="header-brand">
+            <img src="logo-ciledugpromo.jpg" alt="Ciledug Promo Official Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/100/d6336c/ffffff?text=CP'">
+        </header>
+
+        <div class="page-title">
+            <h2>PROPOSAL AKTIVASI VIP & <br><span>DOMINASI PASIEN</span></h2>
+            <p>Dokumen Rahasia - Khusus Manajemen Klinik Terpilih</p>
+        </div>
+
+        <div class="card card-red">
+            <h3>🩸 Kebocoran Pasien VIP & Status Waiting List</h3>
+            <p>Saat ini, karena Anda menggunakan slot <strong>Basic/Gratis</strong>, akses kontak Anda ditutup. <strong>Nomor WhatsApp klinik Anda disensor</strong>. Pasien kelas atas sangat menghargai kepraktisan; mereka tidak akan repot mencari nomor Anda secara manual dan akan langsung beralih mengklik tombol reservasi klinik kompetitor.</p>
+            <p><strong>Peringatan Sistem:</strong> Posisi Anda saat ini berstatus <strong>WAITING LIST</strong>. Jika ada klinik lain yang mengklaim slot VIP hari ini, sistem kami akan memberikan posisi Anda kepada mereka secara permanen.</p>
+        </div>
+
+        <div class="card card-pink">
+            <h3>⚙️ Prosedur Aktivasi & Serah Terima</h3>
+            <p>Sebagai portal direktori premium, kami menjamin transparansi kinerja. Berikut adalah alur eksekusi dari pembukaan sensor hingga aset digital Anda aktif menerima pasien:</p>
+            
+            <div class="timeline">
+                <div class="timeline-item"><div class="timeline-number">1</div><div class="timeline-content"><h4>Penerimaan Berkas</h4><p>Data mentah klinik dan nomor WhatsApp resmi diterima oleh Redaksi.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">2</div><div class="timeline-content"><h4>Pembayaran & Validasi</h4><p>Klinik menyelesaikan administrasi VIP untuk mengunci slot secara permanen.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">3</div><div class="timeline-content"><h4>Buka Sensor & Tombol Live</h4><p>Tim IT membuka sensor nomor dan mengubahnya menjadi Tombol Reservasi Langsung.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">4</div><div class="timeline-content"><h4>Injeksi SEO (Bonus)</h4><p>Penulisan dan penerbitan Artikel Khusus Review Klinik untuk mendominasi Google.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">5</div><div class="timeline-content"><h4>Serah Terima</h4><p>Penyerahan Laporan Link Live untuk dipantau langsung oleh manajemen klinik.</p></div></div>
+            </div>
+        </div>
+
+        <h2 style="text-align: center; margin-top: 60px; font-size: 24px; font-family: 'Playfair Display', serif; font-weight: 900;">Pilih Level Eksklusivitas Anda</h2>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div>
+                    <h3 class="pricing-title">VIP VERIFIED</h3>
+                    <div class="price">Rp 350.000<span> / Tahun</span></div>
+                    <ul class="feature-list">
+                        <li>Kunci Posisi Nominasi (Anti Tergusur)</li>
+                        <li>Buka Sensor Nomor WA Permanen</li>
+                        <li>Aktivasi Tombol "Reservasi Langsung"</li>
+                        <li>Lencana <em>VIP Verified Partner</em></li>
+                    </ul>
+                    
+                    <div class="bonus-box">
+                        <span style="font-size: 11px; color: var(--primary); font-weight: 900; text-transform: uppercase;">🎁 Bonus Spesial Aktivasi Hari Ini:</span>
+                        <p style="font-size: 12.5px; color: var(--text-dark); margin: 5px 0 10px;">1x Artikel SEO Review Eksklusif khusus membahas keunggulan klinik Anda.</p>
+                        <a href="https://ciledugpromo.biz.id/2/ARTICLES/208/swjayamotor-bengkel-mobil-dan-spesialis-ac-di-karang-tengah-tangerang" target="_blank" class="btn btn-outline">👁️ Bukti Keganasan Artikel SEO Kami</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-card vvip">
+                <div class="badge-best">Tahta Tertinggi</div>
+                <div>
+                    <h3 class="pricing-title">SULTAN VVIP</h3>
+                    <div class="price">Rp 1.500.000<span> (Lifetime)</span></div>
+                    <ul class="feature-list">
+                        <li><strong>Semua Fitur Paket VIP (GRATIS)</strong></li>
+                        <li>Pembuatan Website Landing Page Premium (V.8) khusus Klinik Anda.</li>
+                        <li>Desain Mewah Standar Internasional.</li>
+                        <li>Hak Milik Desain Selamanya.</li>
+                    </ul>
+
+                    <div class="speed-box">
+                        <p style="font-size: 12px; color: #fff; margin-bottom: 5px; font-weight: bold;">👑 Standar Emas Estetika:</p>
+                        <p style="font-size: 12px; color: #cbd5e0; margin-bottom: 12px;">Tinggalkan kompetitor Anda. Miliki aset digital semewah klinik kecantikan papan atas Jakarta.</p>
+                        <a href="https://aura-aesthetic-ciledug.vercel.app/" target="_blank" class="btn btn-gold">🌐 Lihat Demo Website Mewah VVIP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-card">
+            <h3 style="color: var(--primary); font-size: 22px; font-family: 'Playfair Display', serif; font-weight: 900; margin-bottom: 10px;">LAKUKAN AKTIVASI & KUNCI SLOT</h3>
+            <p style="color: var(--text-muted); font-size: 14.5px;">Silakan selesaikan administrasi sesuai paket yang dipilih ke rekening resmi Redaksi kami di bawah ini untuk mengaktifkan tombol reservasi Anda.</p>
+            
+            <div class="bank-info">
+                <div class="bank-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M2 10h20v2H2v-2zm10-8l10 5H2l10-5zm-8 12h2v7H4v-7zm6 0h2v7h-2v-7zm6 0h2v7h-2v-7z"/></svg>
+                    Bank BCA
+                </div>
+                <div class="rekening">7655432353</div>
+                <div style="font-size: 15px; font-weight: bold; margin-top: 5px; color: var(--text-muted);">A.n: SUTATO</div>
+            </div>
+
+            <p style="color: var(--text-dark); font-size: 14px; margin-bottom: 20px;">Setelah melakukan transfer, wajib menekan tombol di bawah ini untuk mengirimkan bukti pembayaran (struk/screenshot) ke WhatsApp Manajemen kami.</p>
+            
+            <a href="https://wa.me/6285283212205?text=Halo%20Tim%20Redaksi%20CiledugPromo,%20kami%20dari%20Manajemen%20Klinik%20Kecantikan%20sudah%20melakukan%20Transfer%20ke%20BCA%20SUTATO%20untuk%20Aktivasi%20VIP/VVIP.%0A%0ABerikut%20kami%20lampirkan%20bukti%20transfernya%20(Mohon%20tunggu%20foto%20terkirim):" target="_blank" class="btn btn-wa">
+                KONFIRMASI & UPLOAD BUKTI TRANSFER
+            </a>
+        </div>
+
+        <footer class="footer">
+            <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px dashed rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; gap: 5px;">
+                <span style="font-size: 11px; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase;">Rekening & Otoritas Resmi:</span>
+                <a href="https://ciledugpromo.biz.id" target="_blank" style="color: var(--primary); font-weight: 900; font-size: 18px; letter-spacing: 1px; text-decoration: none; text-transform: uppercase;">
+                    CILEDUGPROMO.BIZ.ID
+                </a>
+            </div>
+            &copy; 2026 CiledugPromo - Aesthetic Directory Group<br>
+            Dokumen Proposal Rahasia. Dilarang menyebarluaskan tanpa izin redaksi.
+        </footer>
+
+    </div>
+
+</body>
+</html>
